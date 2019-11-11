@@ -4,6 +4,7 @@
 #list_de_lettres {
   text-decoration: none;
   list-style: none;
+  padding-left: 0;
 }
 
 h2 {
@@ -30,4 +31,14 @@ h2 {
 #label {
   border-radius: 4px 0 0 4px;
   border: 1px ridge rgba(0, 0, 0, .2);
+}
+
+.liste {
+  width: 65%;
+  margin: 0 auto;
+}
+
+.formulaire {
+  width: 70%;
+  margin: 0 auto;
 }

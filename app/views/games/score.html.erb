@@ -8,6 +8,8 @@
       <p>Sorry but <%= @answer %> does not seem to be an English word... But you did a good use of the given letters (<%= @string_letters %>)</p>
   <% elsif @success && @belongs == false %>
       <p>Sorry but <%= @answer %> can't be built out of "<%= @string_letters %>", even though it's a correct English word.</p>
+  <% elsif @answer == "" %>
+      <p>At least try, noob</p>
   <% else %>
       <p>What in the hell did you write? It is nor an English word, nor it belongs to "<%= @string_letters %>", go eat a donkey's ass</p>
   <% end %>
