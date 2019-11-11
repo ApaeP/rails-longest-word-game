@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="center">
+    <h2>New game</h2>
+    <ul class="d-flex" id="list_de_lettres">
+      <% @letters.each do |letter| %>
+        <div class="letters">
+          <li class="letter"><%= letter %></li>
+        </div>
+      <% end %>
+    </ul>
+
+      <p>What is the longest word you can find?</p>
+    <form action="/score" method="post" class="d-flex">
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token  %>
+      <%= hidden_field_tag :letters, @letters  %>
+      <input class="flex-grow-1" id="label" type="text" name="answer">
+      <input class="btn btn-success" type="submit" value="Play" id="askbtn">
+    </form>
+  </div>
+</div>
